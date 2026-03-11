@@ -1,0 +1,28 @@
+
+
+/* Notification Styles */
+.notification-container {
+    position: fixed;
+    top: 20px; /* Positioned 20px from the top */
+    left: 50%; /* Centers the notification horizontally */
+    transform: translateX(-50%); /* Fine-tunes the horizontal centering */
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    align-items: center; /* Vertically align icon and text */
+    z-index: 1000; /* Ensure it's above other content */
+    min-width: 250px; /* Minimum width for better appearance */
+    text-align: left; /* Align text to the left */
+}
+
+.notification-icon {
+    margin-right: 10px; /* Space between icon and message */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.notification-message {
+    font-size: 16px;
+    color: #333;
+}

@@ -1,0 +1,129 @@
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            /* Fond élégant avec un dégradé de verts et une touche de bleu nuit */
+            background: linear-gradient(135deg, #1e3a30, #2c5f45, #0d2e3a);
+            /* Vert forêt, vert émeraude, bleu nuit */
+            background-size: 400% 400%;
+            /* Pour permettre l'animation du dégradé */
+            animation: gradientBG 15s ease infinite;
+            /* Animation du dégradé */
+            color: #ffffff;
+            /* Texte blanc pour contraster avec le fond */
+            display: flex;
+            flex-direction: column;
+            /* Alignement vertical */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            /* Empêche le contenu de déborder */
+            text-align: center;
+            /* Centre le texte directement sur le body */
+            animation: fadeIn 2s ease-in-out;
+            /* Applique l'animation d'apparition directement au body */
+        }
+
+        .content-wrapper {
+            /* Nouveau conteneur pour le contenu principal */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            /* Prend toute la largeur disponible */
+            max-width: 600px;
+            /* Limite la largeur maximale pour une meilleure lisibilité */
+            margin: 0 auto;
+            /* Centre le conteneur */
+            padding: 20px;
+            /* Ajout de padding */
+            box-sizing: border-box;
+            /* Inclut le padding dans la largeur */
+        }
+
+        h1 {
+            font-size: 3em;
+            /* Légèrement plus grand */
+            margin-bottom: 0.3em;
+            text-shadow: 0 0 10px rgba(144, 238, 144, 0.7);
+            /* Ombre vert clair pour le titre */
+        }
+
+        p {
+            font-size: 1.5em;
+            /* Légèrement plus grand */
+            color: #e0ffe0;
+            /* Blanc cassé verdâtre pour le texte */
+            margin-top: 0;
+            text-shadow: 0 0 5px rgba(144, 238, 144, 0.5);
+            /* Ombre légère pour le texte */
+        }
+
+        .progress-container {
+            width: 70%;
+            /* Ajusté pour être plus visible */
+            background-color: rgba(255, 255, 255, 0.15);
+            /* Fond de la barre plus léger et transparent */
+            border-radius: 10px;
+            margin: 30px auto;
+            /* Plus d'espace */
+            height: 12px;
+            /* Légèrement plus épaisse */
+            overflow: hidden;
+            /* La box-shadow a été retirée du .progress-container */
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            /* Dégradé assorti aux verts pour une transition douce */
+            background: linear-gradient(90deg, #50e3c2, #4CAF50);
+            /* Vert émeraude à vert plus clair */
+            transition: width 3s linear;
+            border-radius: 10px;
+            /* Pour que la barre suive le conteneur */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+                /* Ajout d'un léger scale */
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Amélioration de l'image du logo */
+        img {
+            /* Ciblage direct de l'image */
+            max-width: 250px;
+            /* Assure que l'image ne dépasse pas */
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(144, 238, 144, 0.6));
+            /* Ombre vert clair pour le logo */
+        }
+
+        /* Supprime la flèche de Bootstrap */
+        .dropdown-toggle::after {
+            display: none !important;
+        }

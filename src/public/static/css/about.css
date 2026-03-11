@@ -1,0 +1,72 @@
+/* Styles pour la page À Propos */
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  /* Vous pouvez garder ou modifier le pattern de fond si vous le souhaitez */
+  background: url('https://www.transparenttextures.com/patterns/dark-dotted.png') repeat;
+}
+
+.about-content-box {
+  background: rgba(36, 36, 62, 0.7); /* Fond semi-transparent sombre */
+  border-radius: 15px;
+  border: 1px solid rgba(173, 216, 230, 0.3);
+  backdrop-filter: blur(10px); /* Effet de flou plus prononcé */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.about-content-box h1,
+.about-content-box h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(173, 216, 230, 0.6);
+}
+
+.about-content-box .lead {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.about-content-box p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #a0d2eb;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(173, 216, 230, 0.7);
+}
+
+/* Style pour rendre le bouton "À propos" actif dans la navigation */
+.navbar .nav-link.active-nav-link {
+  font-weight: 600;
+  text-shadow: 0 0 12px #ffffff; /* Effet de lueur accentué */
+  border-bottom: 2px solid #a0d2eb; /* Soulignement subtil */
+  padding-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content-box {
+    padding: 30px;
+  }
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+  .about-content-box h1 {
+    font-size: 2.5rem;
+  }
+  .about-content-box .lead {
+    font-size: 1.1rem;
+  }
+}

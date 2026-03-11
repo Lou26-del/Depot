@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Authentification</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/font-awesome.min.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="{{url_for('static', filename='css/material-design-iconic-font.min.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/animate.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/hamburgers.min.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/animsition.min.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/select2.min.css') }}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/daterangepicker.css') }}">
+	<!--===============================================================================================-->
+
+	<!-- toast CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<!--===============================================================================================-->
+	
+	<!-- toast CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/notification.css') }}"> 
+
+	<style>
+		/* Supprime le carré rouge au survol de l'icône */
+		.wrap-input100.alert-validate:hover::before,
+		.wrap-input100.alert-validate:hover::after {
+			display: none !important;
+			/* ou border: none; background: none; selon ce qui est défini */
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+				<form class="login100-form validate-form" action="/login" method="post">
+					<span class="login100-form-title p-b-26">
+						Login
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="fa fa-user-circle fa-5x"></i>
+					</span>
+
+
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="mail" required>
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass" required>
+						<span class="focus-input100" data-placeholder="Mot de Passe"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" type="submit">
+								Se connecter
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Vous n’avez pas de compte ?
+						</span>
+
+						<a class="txt2" href="/compte">
+							S’inscrire
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+	<!-- Notification Container -->
+	<div id="notificationContainer" class="notification-container">
+		<!-- <div class="notification-icon"></div>-->
+		<i id="notificationIcon" class="notification-icon"></i>
+		<div class="notification-message"></div>
+	</div>
+
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/animsition.min.js') }}"></script>
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/select2.min.js') }}"></script>
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/daterangepicker.js') }}"></script>
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/countdowntime.js') }}"></script>
+	<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	<!-- toast js -->
+	<script src="{{ url_for('static', filename='js/notification.js') }}"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			{% if notif_message %}
+			showNotification("{{ notif_message|escape }}", "{{ notif_type|escape }}");
+			{% endif %}
+		});
+	</script>
+
+</body>
+
+</html>

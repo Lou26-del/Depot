@@ -1,0 +1,253 @@
+ body {
+   font-family: 'Poppins', sans-serif;
+   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+   /* Gradient noir et bleu sombre */
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   color: #ffffff;
+   /* Texte blanc */
+ }
+
+ .navbar {
+   background: linear-gradient(to right, #24243e, #302b63);
+   /* Gradient pour la navbar */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .navbar-brand img {
+   height: 60px;
+ }
+
+ main {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding-top: 40px;
+   background: url('https://www.transparenttextures.com/patterns/dark-dotted.png') repeat;
+   /* Ajout d'un pattern subtil */
+ }
+
+ h1 {
+   font-family: 'Orbitron', sans-serif;
+   /* Police plus futuriste pour le titre */
+   letter-spacing: 2px;
+   margin-bottom: 40px;
+   text-shadow: 0 0 10px rgba(173, 216, 230, 0.7);
+   /* Effet de lueur bleu clair */
+ }
+
+ .custom-input {
+   position: relative;
+   width: 500px;
+   /* Plus large */
+   margin-right: 20px;
+ }
+
+ .custom-input input[type="file"] {
+   width: 100%;
+   padding: 15px 50px 15px 15px;
+   /* Ajustement du padding */
+   border-radius: 10px;
+   /* Arrondi plus prononcé */
+   font-size: 18px;
+   background-color: rgba(255, 255, 255, 0.1);
+   /* Fond semi-transparent */
+   color: #ffffff;
+   border: 1px solid rgba(173, 216, 230, 0.5);
+   /* Bordure bleutée semi-transparente */
+   transition: all 0.3s ease;
+ }
+
+ .custom-input input[type="file"]:focus {
+   outline: none;
+   box-shadow: 0 0 15px rgba(173, 216, 230, 0.7);
+   /* Lueur au focus */
+   border-color: #a0d2eb;
+ }
+
+ .custom-input label {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   border-radius: 10px;
+   padding: 15px 15px;
+   font-size: 18px;
+   background-color: rgba(255, 255, 255, 0.1);
+   color: #ffffff;
+   border: 1px solid rgba(173, 216, 230, 0.5);
+   transition: all 0.3s ease;
+ }
+
+ .custom-input label:hover {
+   background-color: rgba(255, 255, 255, 0.2);
+   border-color: #a0d2eb;
+   box-shadow: 0 0 15px rgba(173, 216, 230, 0.7);
+ }
+
+ .custom-input i {
+   margin-right: 15px;
+   color: #a0d2eb;
+   /* Icône bleue clair */
+   font-size: 22px;
+ }
+
+ .custom-input .text-muted {
+   color: rgba(255, 255, 255, 0.7) !important;
+   /* Texte clair sur fond sombre */
+ }
+
+ .btn-analyser {
+   padding: 15px 30px;
+   border-radius: 10px;
+   border: none;
+   background: linear-gradient(to right, #a0d2eb, #84ceeb);
+   /* Gradient bleu clair */
+   color: #24243e;
+   /* Texte sombre */
+   font-weight: 600;
+   font-size: 18px;
+   box-shadow: 0 4px 15px rgba(160, 210, 235, 0.5);
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
+
+ .btn-analyser:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 6px 20px rgba(160, 210, 235, 0.8);
+ }
+
+ .result-box {
+   margin-top: 40px;
+   padding: 25px;
+   border-radius: 10px;
+   display: none;
+   background: rgba(36, 36, 62, 0.7);
+   /* Fond semi-transparent sombre */
+   color: #ffffff;
+   font-weight: 500;
+   font-size: 18px;
+   border: 1px solid rgba(173, 216, 230, 0.3);
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(5px);
+   /* Effet de flou */
+   -webkit-backdrop-filter: blur(5px);
+ }
+
+ .result-box.error {
+   background: rgba(255, 99, 71, 0.7);
+   /* Rouge pour les erreurs */
+   border-color: rgba(255, 99, 71, 0.5);
+ }
+
+ .result-box.success {
+   background: rgba(144, 238, 144, 0.7);
+   /* Vert pour les succès */
+   border-color: rgba(144, 238, 144, 0.5);
+   color: #24243e;
+   /* Texte sombre pour le succès */
+ }
+
+ .result-box span {
+   font-weight: 600;
+ }
+
+ .bi-paperclip,
+ .bi-person-circle {
+   text-shadow: 0 0 5px rgba(173, 216, 230, 0.7);
+ }
+
+ /* Styles pour l'ensemble de la page (exemple pour la cohérence) */
+ body {
+   background-color: #1e1e1e;
+   /* Un fond sombre comme exemple */
+   color: #ffffff;
+   font-family: 'Orbitron', sans-serif;
+   /* Police globale si désirée */
+ }
+
+ .navbar {
+   background-color: #2a2a2a;
+   /* Couleur de la barre de navigation */
+   padding: 1rem 1.5rem;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ }
+
+ .navbar .text-white {
+   color: #a0d2eb !important;
+   /* Couleur pour TrustMail */
+ }
+
+ /* Styles spécifiques au menu déroulant */
+ .dropdown-menu {
+   background-color: #2a2a2a;
+   /* Fond du menu */
+   border: none;
+   /* Pas de bordure par défaut si vous préférez */
+   border-radius: 0.5rem;
+   /* Coins arrondis */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   /* Ombre plus prononcée */
+   margin-top: 10px;
+   /* Un léger espacement au-dessus du menu */
+ }
+
+ /* Styles pour les éléments du menu */
+ .dropdown-item {
+   color: #a0d2eb;
+   /* Couleur du texte des éléments */
+   padding: 0.75rem 1.5rem;
+   /* Espacement interne */
+   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+   /* Transition douce */
+ }
+
+ .dropdown-item:hover,
+ .dropdown-item:focus {
+   background-color: #a0d2eb;
+   /* Fond au survol */
+   color: #1e1e1e;
+   /* Texte au survol (assombri) */
+   cursor: pointer;
+   /* Indique que l'élément est cliquable */
+ }
+
+ .dropdown-divider {
+   border-top: 1px solid #444;
+   /* Ligne de séparation plus discrète */
+   margin: 0.5rem 0;
+ }
+
+ /* Style pour l'icône utilisateur */
+ .bi-person-circle {
+   color: #a0d2eb !important;
+   /* Assure la couleur définie */
+   font-size: 2.5rem;
+   cursor: pointer;
+   /* Important pour indiquer l'interactivité */
+ }
+
+ /* CSS for the deconnexion button */
+ .shiny-white-button {
+   background: transparent;
+   color: #ffffff;
+   text-decoration: none;
+   outline: none;
+   font-size: 0.85rem;
+   font-weight: 500;
+   text-transform: lowercase;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   text-shadow: 0 0 8px #ffffff;
+ }
+
+ #deconnexionBtn {
+
+   text-transform: capitalize;
+
+ }
+
+ 
